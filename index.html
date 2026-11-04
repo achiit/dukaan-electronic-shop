@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akash Electronics | Shalimar Bagh</title>
+
+<style>
+:root {
+  --navy: #092b45;
+  --blue: #087f91;
+  --cyan: #dff7f8;
+  --ink: #172b3a;
+  --muted: #627482;
+  --paper: #f5f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: white;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  background: var(--navy);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 3px 18px #001b2b33;
+}
+
+.nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand span {
+  color: #69d8df;
+}
+
+nav {
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+  color: #e2f3f7;
+}
+
+nav a:hover {
+  color: #75e2e7;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background: linear-gradient(
+    115deg,
+    #092b45 0%,
+    #07566b 100%
+  );
+  color: white;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 48px;
+  align-items: center;
+  padding: 64px 0;
+}
+
+.eyebrow {
+  color: #a6edf0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.05;
+  margin: 14px 0 18px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #e1f1f4;
+  max-width: 510px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 14px;
+  background: white;
+  color: var(--navy);
+}
+
+.btn.primary {
+  background: #6fe0e4;
+  color: #073347;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #b4e8ec;
+}
+
+.hero-photo {
+  height: 390px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 5px solid #ffffff22;
+  box-shadow: 0 18px 40px #001b2b55;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rating {
+  margin-top: 20px;
+  color: #d8eff2;
+  font-size: 14px;
+}
+
+.stars {
+  color: #ffd36a;
+  letter-spacing: 2px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 68px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 34px;
+}
+
+.section-head h2 {
+  font-size: 32px;
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.section-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* PRODUCT CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #e4ebef;
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 7px 22px #092b450c;
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+  background: var(--paper);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  align-items: center;
+}
+
+.about-img {
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.about p {
+  color: var(--muted);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.info div {
+  background: white;
+  border: 1px solid #e5edf0;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.info b {
+  display: block;
+  color: var(--navy);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.info span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* CONTACT SECTION */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-card {
+  border: 1px solid #e4ebef;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.contact-card h3 {
+  margin: 0 0 14px;
+  color: var(--navy);
+}
+
+.contact-line {
+  padding: 10px 0;
+  border-bottom: 1px solid #edf1f3;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-line:last-child {
+  border: 0;
+}
+
+.contact-line strong {
+  color: var(--ink);
+}
+
+/* FOOTER */
+
+footer {
+  background: #061e31;
+  color: #d5e5eb;
+  padding: 24px 0;
+  font-size: 13px;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:760px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    padding: 42px 0;
+    gap: 28px;
+  }
+
+  .hero-photo {
+    height: 280px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    height: 270px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+}
+
+@media(max-width:460px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="wrap nav">
+
+<a class="brand" href="#">
+AKASH <span>ELECTRONICS</span>
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<!-- HOME SECTION -->
+
+<section class="hero" id="home">
+
+<div class="wrap hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Electronics showroom · Shalimar Bagh, Delhi
+</div>
+
+<h1>
+Welcome to<br>
+Akash Electronics
+</h1>
+
+<p>
+Explore a range of electronics and home appliances
+at our showroom in Shalimar Village, Shalimar Bagh.
+</p>
+
+<div class="actions">
+
+<a class="btn primary" href="tel:09716171171">
+Call the Store
+</a>
+
+<a class="btn outline"
+href="https://www.google.com/maps/search/?api=1&query=B-11%2C+Shalimar+Village%2C+Shalimar+Bagh%2C+Delhi+110088"
+target="_blank">
+Get Directions
+</a>
+
+</div>
+
+<div class="rating">
+<span class="stars">★★★★★</span>
+<strong>4.8/5</strong> · 71 Google reviews
+</div>
+
+</div>
+
+<div class="hero-photo">
+<img src="images/storefront.jpg"
+alt="Akash Electronics showroom entrance">
+</div>
+
+</div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+
+<section id="products">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<h2>Products at the Showroom</h2>
+
+<p>
+Product types visible in the shop photographs.
+</p>
+
+</div>
+
+<div class="cards">
+
+<article class="card">
+
+<img src="images/appliances-display.jpg"
+alt="Home appliances">
+
+<div class="card-body">
+
+<h3>Home Appliances</h3>
+
+<p>
+Appliances and household electronics
+displayed in-store.
+</p>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="images/refrigerator.jpg"
+alt="Refrigerator">
+
+<div class="card-body">
+
+<h3>Refrigerators</h3>
+
+<p>
+Refrigerator models on display.
+</p>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="images/electronics-shelves.jpg"
+alt="Electronics products">
+
+<div class="card-body">
+
+<h3>Electronics & Accessories</h3>
+
+<p>
+A selection of electronics products
+and accessories.
+</p>
+
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+<div class="wrap about-grid">
+
+<div class="about-img">
+
+<img src="images/electronics-shelves.jpg"
+alt="Inside Akash Electronics showroom">
+
+</div>
+
+<div>
+
+<div class="eyebrow" style="color:#087f91">
+Visit our showroom
+</div>
+
+<h2>
+Your local electronics store in Shalimar Bagh
+</h2>
+
+<p>
+Akash Electronics is an electronics store located at
+B-11, Shalimar Village, Shalimar Bagh, New Delhi.
+Visit the showroom to explore the products available in-store.
+</p>
+
+<div class="info">
+
+<div>
+<b>Google rating</b>
+<span>4.8 ★ · 71 reviews</span>
+</div>
+
+<div>
+<b>Store hours</b>
+<span>Open · closes at 10:00 PM</span>
+</div>
+
+<div>
+<b>Store type</b>
+<span>Electronics store</span>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section id="contact">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<h2>Visit or Contact Us</h2>
+
+<p>
+We look forward to welcoming you to the showroom.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Store Details</h3>
+
+<div class="contact-line">
+
+<strong>Address</strong><br>
+
+B-11, Shalimar Village,
+Shalimar Bagh, New Delhi,
+Delhi 110088
+
+</div>
+
+<div class="contact-line">
+
+<strong>Phone</strong><br>
+
+<a href="tel:09716171171">
+097161 71171
+</a>
+
+</div>
+
+<div class="contact-line">
+
+<strong>Hours shown on Google</strong><br>
+
+Open · closes 10:00 PM
+
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Find Akash Electronics</h3>
+
+<p style="color:#627482;font-size:14px">
+
+Use the button below to open directions
+to the showroom.
+
+</p>
+
+<a class="btn primary"
+href="https://www.google.com/maps/search/?api=1&query=B-11%2C+Shalimar+Village%2C+Shalimar+Bagh%2C+Delhi+110088"
+target="_blank">
+
+Open in Google Maps
+
+</a>
+
+<p style="color:#627482;font-size:12px;margin-top:18px">
+
+Please confirm current hours and contact
+details before publishing.
+
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="wrap foot">
+
+<span>
+© <span id="year"></span> Akash Electronics
+</span>
+
+<span>
+Shalimar Bagh, New Delhi
+</span>
+
+</div>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
